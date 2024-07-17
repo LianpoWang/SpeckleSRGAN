@@ -9,9 +9,10 @@ from tqdm import tqdm
 from model.model import Generator
 
 filenameList = os.listdir(r'datasets/Speckle_test/LR')
-filepath = r'datasets/Speckle_test/LR'
+filepath = r'datasets/Speckle_test/LR/'
+save_path = r'result/Speckle-SRGAN'
 
-os.makedirs(filepath + "sr", exist_ok=True)
+os.makedirs(save_path, exist_ok=True)
 
 gpu_index = 0
 
@@ -55,4 +56,4 @@ with torch.no_grad():
             # elapsed = (time.clock() - start)
             # print('cost' + str(elapsed) + 's')
             out_img = ToPILImage()(out[0].data.cpu())
-            out_img.save(filepath + 'sr/' + image_name)
+            out_img.save(save_path + '/' + image_name)

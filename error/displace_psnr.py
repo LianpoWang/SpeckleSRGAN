@@ -26,9 +26,9 @@ def ssim(img1, img2):
 for speckle_size in range(1, 5):
 
     test_path = rf"..\datasets\Speckle_test\HR\{speckle_size}"
-    cupic_path = rf"res\INTER_CUBIC\X{upscale_factor}\deformation"
-    srgan_path = rf"res\Speckle-SRGAN\X{upscale_factor}\deformation"
-    ssrgan_path = rf"res\SRGAN\X{upscale_factor}\deformation"
+    cupic_path = rf"result\INTER_CUBIC\X{upscale_factor}\deformation"
+    srgan_path = rf"result\Speckle-SRGAN\X{upscale_factor}\deformation"
+    ssrgan_path = rf"result\SRGAN\X{upscale_factor}\deformation"
 
     sr_psnr_list = []
     cup_psnr_list = []
