@@ -16,6 +16,7 @@ os.makedirs(save_path, exist_ok=True)
 
 gpu_index = 0
 
+
 with torch.no_grad():
     for image_name in tqdm(filenameList):
 
